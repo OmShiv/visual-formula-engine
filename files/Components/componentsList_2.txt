@@ -1,0 +1,5 @@
+[
+{ 'cmpid' : '0', 'text' : 'Sales Component' },
+{ 'cmpid' : '1', 'text' : 'Transactional Component' },
+{ 'cmpid' : '2', 'text' : 'dfsf' }
+]

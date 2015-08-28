@@ -1,0 +1,1 @@
+{ "formulaName": "OHCA to BP", "companyName": "NovoNordisk", "reportType": "URA", "businessVer": "V001", "fID": "151101114154145", "formulaData": [{ "text": "123 = 2", "type": "number", "dataelem": "2", "wac": "123" },{ "text": " ", "type": "operator", "dataelem": "plus" },{ "text": "12 Month Eligible Sales Amt-Sum", "type": "component", "cmpid": "A7" }, "3"]}

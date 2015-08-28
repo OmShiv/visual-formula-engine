@@ -1,0 +1,113 @@
+<fieldset class="ajaxFS" id="reportOneFS"><legend>Report </legend>
+	<table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 7px;">
+	<tr>
+		<td> Manufacturer Name : <b style="color: red;">*<b/></td>
+		<td>
+			<select name="expManufacturer1" id="expManufacturer1">
+				<option value="- Select -">- Select -</option>
+				<option value="Santarus">	Santarus	</option>
+			</select>
+		</td>
+		<td> Year : <b style="color: red;">*<b/></td>
+		<td>
+			<select name="expYear1" id="expYear1">
+				<option value="- Select -">- Select -</option>
+				<option value="2008">2008</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td> Report Type : <b style="color: red;">*<b/></td>
+		<td>
+			<select name="expReportType1" id="expReportType1" onchange="expSetFormula(1, $(this).find(':selected').text())">
+				<option value="- Select -">- Select -</option>
+				<option value="AMP">	AMP	</option>
+				<!--<option value="NFAMP">	NFAMP	</option>-->
+				<option value="URA">	URA	</option>
+				<!--<option value="ASP">	ASP	</option>-->
+				<!--<option value="AMP Comparison">	AMP Comparison	</option>-->
+				<option value="Best Price">		Best Price</option>
+				<!--<option value="PDL">	PDL</option>-->
+				<!--<option value="ARK">	ARK</option>-->
+				<option value="OHCA">	OHCA</option>
+			</select>
+		</td>
+		<td>Month :</td>
+		<td>
+			<select name="expMonth1" id="expMonth1">
+				<option value="- Select -">- Select -</option>
+				<option value="January">	January		</option>
+				<option value="February">	February	</option>
+				<option value="March">		March		</option>
+				<option value="April">		April		</option>
+				<option value="May ">		May 		</option>
+				<option value="June">		June		</option>
+				<option value="July">		July		</option>
+				<option value="August">		August		</option>
+				<option value="September">	September	</option>
+				<option value="October">	October		</option>
+				<option value="November">	November	</option>
+				<option value="December">	December	</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td>Report Status : <b style="color: red;">*<b/></td>
+		<td>
+			<select name="expReportStatus1" id="expReportStatus1">
+				<option value="- Select -">- Select -</option>
+				<option value="0">	Finalized	</option>
+				<option value="1">	Un-Finalized</option>
+			</select>
+		</td>
+		<td> Quarter :</td>
+		<td>
+			<select name="expQuarter1" id="expQuarter1">
+				<option value="- Select -">- Select -</option>
+				<option value="01">Quarter 01</option>
+				<option value="02">Quarter 02</option>
+				<option value="03">Quarter 03</option>
+				<option value="04">Quarter 04</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td> Formula 1 :</td>
+		<td> <input type="text" id="expFormulaAuto1" readonly="readonly" title="This Field is Uneditable" value="" /></td>
+		<td> Semi-Annual :</td>
+		<td>
+			<select name="expSemiAnnual1" id="expSemiAnnual1">
+				<option value="- Select -">- Select -</option>
+				<option value="01">Yes</option>
+				<option value="02">No</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td> Formula Version :</td>
+		<td> <input type="text" id="expformulaVer1" value="" readonly="readonly" title="This Field is Uneditable"/></td>
+		<td> Report Version : <b style="color: red;">*<b/></td>
+		<td>
+			<select name="expReportVer1" id="expReportVer1" onchange="expSetFormula(1, $('#expReportType1 :selected', '#tinycontent').text());">
+				<option value="- Select -">- Select -</option>
+				<option value="v001">v001</option>
+				<option value="v002">v002</option>
+				<option value="v003">v003</option>
+				<option value="v004">v004</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+</fieldset>
+
+<fieldset class="ajaxFS"><legend> Label </legend>
+	<input type="text" id="expLabel" value="" class="onlyInputInFS" />
+</fieldset>
+
+<fieldset style="border: none !important; padding: 8px 0px 0px  !important;">
+		<input type="button" id="setExpBtn" value="Set" onclick="setExpressionSuccess('reportValue')" style="width: 30px !important;"/>
+		<input type="button" id="hideExpBtn" value="Cancel" onclick="TINY.box.hide();" style=""/>
+</fieldset>

@@ -1,0 +1,42 @@
+<fieldset class="ajaxFS" id="reportOneFS" style="display: block; padding-right: 5px; padding-bottom: 6px;"><legend> Rebate Program Value </legend>
+	<table border="0" cellpadding="0" cellspacing="0" style="margin-left: 7px;">
+	<tr>
+		<td colspan=2> Company Name : <b style="color: red;">*<b/></td>
+		<td colspan=2>
+			<select name="companyName" id="companyName">
+				<option value="- Select -">- Select -</option>
+				<option value="Santarus">	First Quality	</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2> Category </td>
+		<td colspan=2>
+			<select name="category" id="category">
+				<option value="- Select -">- Select -</option>
+				<option value="2008">Volume Incentive - Sales</option>
+			</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td colspan=2>Program <b style="color: red;">*<b/></td>
+		<td colspan=2>
+			<select name="program" id="program">
+				<option value="- Select -">- Select -</option>
+				<option value="0">	FQT Products - Tier Incentive	</option>
+			</select>
+		</td>
+	</tr>
+
+	</table>
+</fieldset>
+
+<fieldset class="ajaxFS" style="display: block; padding-right: 5px; padding-bottom: 6px;"><legend> Label </legend>
+	<input type="text" id="expLabel" value="" class="onlyInputInFS" />
+</fieldset>
+
+<fieldset style="display: block; width: 285px; border: none !important; padding: 8px 0px 0px  !important;">
+		<input type="button" id="setExpBtn" value="Set" onclick="setExpressionSuccess('reportValue')" style="width: 30px !important;"/>
+		<input type="button" id="hideExpBtn" value="Cancel" onclick="TINY.box.hide();" style=""/>
+</fieldset>

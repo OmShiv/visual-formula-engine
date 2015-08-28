@@ -1,0 +1,93 @@
+	/* 
+	*	@author - Om Shankar
+	*	@Client - gsK, NovoNordisk
+	*	@file - Main Styles
+	*/
+
+	/* Main Styles */
+body{font-family:Tahoma,Geneva,sans-serif;font-size:11px;background:#f9fdff}
+a,a:active,a:hover,a:visited,a:link,a:focus{text-decoration:none!important;color:#3f64a9}
+a:active{top:1px}
+#theHeader{width:1240px;display:none;margin:0!important}
+#toolBar{width:1214px;height:25px;border:1px solid #555;background:#DAEAF4;margin:10px 5px 0 12px;padding:5px 5px 8px 6px}
+div.toolbarBtn{height:18px;border:1px solid #9EB5B9;border-left:none;text-align:center;float:left;cursor:pointer;border-collapse:collapse;margin:0;padding:5px 6px 3px}
+div.toolbarBtn:first-child{border-left:1px solid #9EB5B9}
+div.toolbarBtn:active{border-color:#60848F}
+fieldset{margin-top:0!important}
+div.legend{height:12px;background:#d9ecf4;border:1px solid #aad2e6;cursor:move;margin-top:2px;padding:4px}
+div.widgeT table{border-top:1px solid transparent;border-bottom:1px solid transparent;margin:7px 0 0}
+.formTable td{padding:3px 5px}
+.modeTable td{padding-bottom:3px;width:33%!important}
+#descTable td{padding:3px 2px!important}
+select{width:150px}
+span.reQ{color:red}
+span.valSet{background:#e7cbd0}
+.radText{margin-bottom:3px}
+.setNumVal{width:20px;cursor:pointer;margin-left:5px;margin-top:2px;border:1px solid #cfadb6;background:#efdce0;padding:2px}
+div.widgeT{width:190px;position:absolute;background:#f2fbff;padding-bottom:4px}
+img.toolBtns{width:12px;height:12px;border:none;cursor:pointer;float:right;margin:0 2px}
+div#wBoard,div#formulaDiv,.subFormula{margin:3px 0;padding:5px}
+div.theDraggables,#generateDiv,#theFormulae{border:1px solid #345;margin:3px 0 3px 4px;padding:3px 5px 4px}
+#parenT{border:1px solid #000;width:1214px;height:805px;margin:10px 5px 0 12px;padding:3px 5px 8px 6px}
+#wBoard{height:710px;overflow-x:hidden;border:1px transparent}
+#formulaDiv{height:63px}
+div.formulaElem{height:18px;width:163px;border:1px solid #9eb5b9;text-align:center;cursor:move;margin:5px 0;padding:5px 3px}
+div.subFormula{min-height:150px;max-height:251px;height:251px;overflow-y:scroll!important;border:1px solid #3c4d55;margin-top:6px;width:745px;float:right}
+td.eqtnCol{vertical-align:top}
+div.hoveredDiv{border:1px solid #bac4da !important;background:#e6e2fe}
+div.hasElem{border:1px solid #aaa;cursor:pointer}
+div.hasSubForm{border:1px solid #9eb5b9}
+div.isSelected{border:1px solid #a5a5a5}
+div.draG{width:160px;height:18px;border:1px solid #cfcfcf;cursor:move;text-align:center;margin:2px auto;padding:6px 0 3px}
+div.OriginalSF{border:1px solid #cfcfcf}
+div.subDrag{width:160px!important;cursor:move;text-align:center;margin:2px auto;padding:5px 3px 0}
+.operators{padding-top:10px}
+.operators .draG{width:30px;float:left;margin:2px 2px 2px 10px}
+span.sfd,span.signS{border:1px solid #4599c7;background:#c7e1ef;text-align:center;line-height:23px;margin:0 2px;padding:2px}
+div.errorBlock{border:1px solid #ff4848}
+table#playGroundTable td{padding:2px}
+table.theElementsTable{margin-right:10px}
+table.popTable{width:500px;border-collapse:collapse}
+table.popTable th{background:#c2ede7;color:#284042}
+table.popTable td{color:#2e4749}
+table.popTable th,table.popTable td{border:1px solid #7acfcb;padding:3px 4px}
+div.subFormula fieldset{border:1px solid #143634;margin-top:6px}
+#straightLineDiv{width:880px!important;height:48px;margin-left:6px;text-align:center;background:#e7f4fa;border:1px solid #60594f;line-height:22px;padding:6px}
+#straightLine span{border:1px solid #76a0ad;background:#fff;text-align:center;cursor:pointer;margin:0 2px;padding:2px 3px 3px 4px}
+.ui-draggable-dragging{background:none;border:1px solid #bfbfbf;height:25px;z-index:9999!important}
+.borderstyle2{border:1px transparent;padding:4px}
+#loadSelTrig{white-space:nowrap;float:right;cursor:pointer;margin:4px 5px 0}
+#loadSelClick{cursor:pointer;float:right}
+#ecoTrig{white-space:nowrap;cursor:pointer;display:inline;margin:5px 3px 3px 0}
+#ecoClick{cursor:pointer;margin-top:0;position:relative;top:1px;height:12px}
+.extFuncTools{height:14px;float:right;cursor:pointer;margin-top:2px;margin-right:7px;border:1px solid #76a0ad;padding:4px 7px 4px 8px}
+.glow{background:#AAD7F2!important}
+.dismissBox{background:url(../images/cross.png);width:12px;height:12px;float:right}
+#btnsTable td{padding:0!important}
+#testdiv{width:600px;border:1px solid #ccc;background:#fff;margin:0 auto;padding:20px 25px}
+#tinybox{position:absolute;display:none;background:#fff url(../images/preload.gif) no-repeat 50% 50%;border:1px solid #344633;z-index:2000;padding:10px}
+#tinymask{position:absolute;display:none;top:0;left:0;height:100%;width:100%;background:#679bb4;z-index:1500}
+#tinycontent{border:1px solid #6f9b64;background:#eafffd;font-size:11px!important;padding:10px}
+#tinycontent input,#tinycontent select{font-size:10px!important}
+#tinycontent input.button{margin-left:5px;margin-right:0;min-width:4em;margin-top:5px}
+#tinycontent .dismiss{float:right;border:1px solid #76a0ad;cursor:pointer;padding:1px 5px 2px}
+.sixtyPix{width:60px!important;font-size:10px}
+.one40Pix{width:144px!important;font-size:10px}
+.expBlock{border:1px solid #abdb99;background:#daefd1;cursor:pointer;padding:2px}
+.ajaxFS{border:1px solid #000}
+.ajaxFS	+ .ajaxFS{margin-top:5px!important}
+.ajaxFS legend{margin-left:10px;font-weight:700;padding:0 6px}
+.ajaxFS,.ajaxFS *{font-family:Tahoma,Geneva,sans-serif;font-size:11px}
+.ajaxFS td{padding-top:2px;padding-bottom:2px}
+.ajaxFS td:first-child,.ajaxFS td:first-child +td +td{white-space:nowrap;width:120px!important}
+.ajaxFS td:first-child +td +td{padding-left:8px}
+.ajaxFS .onlyInputInFS{margin:5px 7px 8px}
+.ajaxFS input{width:144px}
+input[type=radio]{margin-top:3px}
+#generateDiv select{width:90px}
+select.expand{width:auto!important}
+#expGenfunc	td{text-align:center;padding:0 3px}
+#expGenfunc	input{width:130px}
+div.scrollFunc,#btnsTable{margin-top:4px}
+div.unitDiv,div.unitDiv2{width:180px;min-height:30px;height:auto;border:1px solid transparent;text-align:center}
+span.sfd:hover,span.signS:hover,#straightLine span:hover,.extFuncTools:hover{background:#d8f2f5}

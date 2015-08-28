@@ -1,0 +1,8 @@
+{ "componentList": [
+{ "cmpid" : "0", "text" : "12 Month Chargeback" },
+{ "cmpid" : "1", "text" : "CB Demo Componenet" },
+{ "cmpid" : "2", "text" : "Included Sales" },
+{ "cmpid" : "3", "text" : "12 Mnth Avg Excluded CB Amt" },
+{ "cmpid" : "4", "text" : "Exlcuded Sales Units" }
+
+] }

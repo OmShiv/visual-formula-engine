@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<link rel="stylesheet" 			type="text/css" href="css/main.css"/>
+
+	<script type="text/javascript" 	src="js/jquery.js" > </script>
+	<script type="text/javascript" 	src="js/add-ui-fo.js"  > </script>
+	<title>Formula Engine</title>
+
+</head>
+<body>
+	<div id="contain">
+	<div id="toolBar">
+		<!--<span id="headinG" style="float: right; margin-top: 3px; ">Toolbar</span> -->
+		<span class="extFuncTools gen-button" id="ecoTrigSpan">
+			<div id="ecoTrig" >Eco-Friendly</div>
+			<input id="ecoClick" type="checkbox" title="Save Energy" />
+		</span>
+		<span id="widgetsToggle" state="inactive" class="extFuncTools gen-button"> Close All</span>
+	</div>
+	<div id="parenT" class="parenT ">
+		<table id="parentTable" width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td valign="top" class="findSubFormulaDiv" style="padding-right: 2px">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td>
+						<div id="formulaDiv">
+							<table id="theResultsTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td class="info" >
+									<div style="height: 57px; padding: 2px; margin-left: 6px;">
+									<table id="descTable" width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 20px;">
+										<tr>
+											<td> Company Name</td><td class="cName" nowrap="nowrap"> ..</td>
+										</tr>
+										<tr>
+											<td> Report Type </td><td class="rType" nowrap="nowrap"> ..</td>
+										</tr>
+										<tr>
+											<td> Formula Name</td><td class="fName" nowrap="nowrap"> ..</td>
+										</tr>
+									</table>
+									</div>
+								</td>
+								<td class="theResults" width="75%">
+									<div id="straightLineDiv" title="Drag and Drop Elements in Work Board to Generate Formula"> </div>
+								</td>
+							</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<div style="position:absolute; width: 1212px; height: 730px">
+						<div id="wBoard" class="wBoard">
+							<table width="100%" id="playGroundTable" style="border-collapse:collapse;" border="0" cellpadding="0" cellspacing="0">
+							</table>
+						</div>
+
+						<div id="theFormulae" class="widgeT" style="height: 185px;  top:235px; left: 1px; ">
+							<div class="legend">Formula
+								<img href="javascript://" src="images/cross.png" class="toolBtns close" id="fClose" restid="formulaRestore"/>
+								<img href="javascript://" src="images/min.png" class="toolBtns minMax" id="fMin"/>
+							</div>
+							<div style="height:155px; overflow-x: hidden; overflow-y: hidden;" class="scrollFunc">
+								<table style="border: none !important;" cellpadding="0" cellspacing="0" class="theFormulae">
+								<!-- <tr> <td> <div class="formulaElem tripleb"> F1 </div> </td> </tr> -->
+								</table>
+							</div>
+						</div>
+						<div id="compDiv" class="theDraggables widgeT" style="height: 275px;  bottom:8px; left: 1px; ">
+							<div class="legend">Components
+								<img href="javascript://" src="images/cross.png" class="toolBtns close" id="compClose" restid="compRestore"/>
+								<img href="javascript://" src="images/min.png" class="toolBtns minMax" id="compMin"/>
+							</div>
+							<div style="overflow-x: hidden; overflow-y: hidden; height: 245px;" class="scrollFunc">
+							<table class="theElementsTable" border="0" cellpadding="0" cellspacing="0" style="border: none !important;">
+								<tr> <td> <div id="A2"	cmpid="A2"	class="draG">	12 Months Eligible #	</div> </td> </tr>
+								<tr> <td> <div id="A3"	cmpid="A3"	class="draG">	12 Months In-Eligible $	</div> </td> </tr>
+								<tr> <td> <div id="A4"	cmpid="A4"	class="draG">	12 Months In-Eligible #	</div> </td> </tr>
+								<tr> <td> <div id="A5"	cmpid="A5"	class="draG">	12 Months All $	</div> </td> </tr>
+								<tr> <td> <div id="A6"	cmpid="A6"	class="draG">	12 Months All #	</div> </td> </tr>
+								<tr> <td> <div id="A7"	cmpid="A7"	class="draG">	12 Month Elig. Sales Amt-Sum	</div> </td> </tr>
+								<tr> <td> <div id="A8"	cmpid="A8"	class="draG">	12 Month Elig. Sales Qty-Sum	</div> </td> </tr>
+								<tr> <td> <div id="B1"	cmpid="B1"	class="draG">	Current Month Elig. $ </div> </td> </tr>
+								<tr> <td> <div id="B2"	cmpid="B2"	class="draG">	Current Month Elig. # </div> </td> </tr>
+								<tr> <td> <div id="B3"	cmpid="B3"	class="draG">	Current Month In-Elig. $ </div> </td> </tr>
+								<tr> <td> <div id="B4"	cmpid="B4"	class="draG">	Current Month In-Elig. # </div> </td> </tr>
+								<tr> <td> <div id="B5"	cmpid="B5"	class="draG">	Current Month All $ </div> </td> </tr>
+								<tr> <td> <div id="B6"	cmpid="B6"	class="draG">	Current Month All # </div> </td> </tr>
+								<tr> <td> <div id="C1"	cmpid="C1"	class="draG">	Current Quarter Elig. $ </div> </td> </tr>
+								<tr> <td> <div id="C2"	cmpid="C2"	class="draG">	Current Quarter Elig. # </div> </td> </tr>
+								<tr> <td> <div id="C3"	cmpid="C3"	class="draG">	Current Quarter In-Elig. $ </div> </td> </tr>
+								<tr> <td> <div id="C4"	cmpid="C4"	class="draG">	Current Quarter In-Elig. # </div> </td> </tr>
+								<tr> <td> <div id="C5"	cmpid="C5"	class="draG">	Current Quarter All $ </div> </td> </tr>
+								<tr> <td> <div id="C6"	cmpid="C6"	class="draG">	Current Quarter All # </div> </td> </tr>
+								<tr> <td> <div id="D1"	cmpid="D1"	class="draG">	Max Cur. Qrtr Elig. p.u.</div> </td> </tr>
+								<tr> <td> <div id="D3"	cmpid="D3"	class="draG">	Max Cur. Qrtr In-Elig. p.u.</div> </td> </tr>
+								<tr> <td> <div id="D2"	cmpid="D2"	class="draG">	Max Cur. Qrtr All p.u.</div> </td> </tr>
+								<tr> <td> <div id="E1"	cmpid="E1"	class="draG">	Max Cur. Qrtr Elig. p.u. CP</div> </td> </tr>
+								<tr> <td> <div id="E2"	cmpid="E2"	class="draG">	Max Cur. Qrtr In-Elig. p.u. CP</div> </td> </tr>
+								<tr> <td> <div id="E3"	cmpid="E3"	class="draG">	Max Cur. Qrtr All p.u. CP</div> </td> </tr>
+								<tr> <td> <div id="S1"	cmpid="S1"	class="draG">	Included Sales</div> </td> </tr>
+								<tr> <td> <div id="S2"	cmpid="S2"	class="draG">	Included Sales Units</div> </td> </tr>
+								<tr> <td> <div id="S3"	cmpid="S3"	class="draG">	Excluded Sales</div> </td> </tr>
+								<tr> <td> <div id="S4"	cmpid="S4"	class="draG">	Excluded Sales Units</div> </td> </tr>
+								<tr> <td> <div id="S5"	cmpid="S5"	class="draG">	Excluded CB Sales</div> </td> </tr>
+								<tr> <td> <div id="S6"	cmpid="S6"	class="draG">	Exclude CB Sales Units</div> </td> </tr>
+								<tr> <td> <div id="S7"	cmpid="S7"	class="draG">	12 Month Avg CB Amt</div> </td> </tr>
+								<tr> <td> <div id="S8"	cmpid="S8"	class="draG">	12 Month Avg Excluded CB Amt</div> </td> </tr>
+								<tr> <td> <div id="R1"	cmpid="R1"	class="draG">	12 Month Avg Admin Fees</div> </td> </tr>
+								<tr> <td> <div id="R2"	cmpid="R2"	class="draG">	12 Month Avg Excluded GPO Fee</div> </td> </tr>
+								<tr> <td> <div id="R3"	cmpid="R3"	class="draG">	Included Rebate Units</div> </td> </tr>
+								<tr> <td> <div id="R4"	cmpid="R4"	class="draG">	Excluded Rebate Units    </div> </td> </tr>
+							</table>
+							</div>
+						</div>
+
+						<div id="operatorsDiv" class="theDraggables widgeT" style="height: 148px; bottom:8px; left:207px; width: 185px; ">
+							<div class="legend">Operators
+								<img href="javascript://" src="images/cross.png" class="toolBtns close" id="operatorsClose" restid="operatorsRestore"/>
+								<img href="javascript://" src="images/min.png" class="toolBtns minMax" id="operatorsMin"/>
+							</div>
+							<div style="height: 120px;" class="operators">
+								<div dataelem="lbkt"	class="draG operator">	(	</div>
+								<div dataelem="rbkt"	class="draG operator">	)	</div>
+								<div dataelem="mul"		class="draG operator">	x	</div>
+								<div dataelem="div"		class="draG operator">	/	</div>
+								<div dataelem="plus"	class="draG operator">	+	</div>
+								<div dataelem="minus"	class="draG operator">&#8211 </div>
+								<div dataelem="min_max"	class="draG " id="maxCmp" mmtype="max"> MAX </div>
+								<div dataelem="min_max"	class="draG " id="minCmp" mmtype="min"> MIN </div>
+							</div>
+						</div>
+
+						<div id="specialsDiv" class="theDraggables widgeT" style="height: 250px; top:296px; left:207px; width: 185px;">
+							<div class="legend">Functions
+								<img href="javascript://" src="images/cross.png" class="toolBtns close" id="specialsClose" restid="specialsRestore"/>
+								<img href="javascript://" src="images/min.png" class="toolBtns minMax" id="specialsMin"/>
+							</div>
+							<div style="overflow-x: hidden; overflow-y: hidden; height: 220px;" class="scrollFunc">
+							<table  class="theElementsTable" border="0" cellpadding="0" cellspacing="0" style="border: none !important;">
+								<tr> <td> <div id="numBox"	class="draG" title="">	Number	</div> </td> </tr>
+								<tr> <td> <div id="repComp"	class="draG speCial" title="">	Report Comparison Expression	</div> </td> </tr>
+								<tr> <td> <div id="fComp"	class="draG speCial" title="">	Formula Comparison Expression	</div> </td> </tr>
+								<tr> <td> <div id="repVal"	class="draG speCial" title="">	Report Value </div> </td> </tr>
+								<tr> <td> <div id="rebProg"	class="draG speCial" title="">	Rebate Program Value </div> </td> </tr>
+								<tr> <td> <div id="pkgSize"	class="draG speCial" title="">	Source Element </div> </td> </tr>
+								<tr> <td> <div id="cpiInd"	class="draG speCial" title="">	CPI </div> </td> </tr>
+							</table>
+							</div>
+						</div>
+
+						<div id="generateDiv" class="widgeT  " style="height: 215px; top:8px; left: 1px; ">
+							<div class="legend">Actions
+								<img href="javascript://" src="images/cross.png" class="toolBtns close" id="actionsClose" restid="actionsRestore"/>
+								<img href="javascript://" src="images/min.png" class="toolBtns minMax" id="actionsMin"/>
+							</div>
+							<div style="height: 170px;">
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" id="modeTable" class="modeTable" style=" border:1px solid transparent;">
+							<tr>
+								<td> <input type="radio" id="addMod"    name="modeSelect"/> <span class="radText">Add	 </span></td>
+								<td> <input type="radio" id="editMod"   name="modeSelect"/> <span class="radText">Edit	 </span></td>
+								<td> <input type="radio" id="deleteMod" name="modeSelect"/> <span class="radText">Delete </span></td>
+							</tr>
+							</table>
+
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" id="formTable" class="formTable">
+							<tr>
+								<td>Company : <span class="reQ">*</span></td>
+								<td align=right>
+									<select type="text" id="companyName" style="font-size: 10px">
+										<option value="0">- Select One -</option>
+									<!--<option value="Santarus">Company Name</option>-->
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Report Type: <span class="reQ">*</span></td>
+								<td align=right>
+									<select type="text" id="reportType" style="font-size: 10px">
+										<option value="0">- Select One -</option>
+										<option value="1">ARP  </option>
+									<!--<option value="2">ASP  </option>-->
+										<option value="3">URA  </option>
+									<!--<option value="4">NFAMP</option>-->
+										<option value="5">Best Price</option>
+									<!--<option value="6">AMP Comparison </option>-->
+									<!--<option value="7">PDL</option>-->
+									<!--<option value="8">ARK</option>-->
+										<option value="9">OHCA</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Formula Name: </td>
+								<td align=right>
+									<select type="text" id="formulaNameSel" style="font-size: 10px">
+										<option value="0">- Select One -</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Version: </td>
+								<td align=right>
+									<select type="text" id="businessVer" style="font-size: 10px">
+										<option value="0">- Select One -</option>
+										<option value="V001" selected="selected">V001</option>
+										<option value="V002">V002 </option>
+										<option value="V003">V003</option>
+										<option value="V004">V004</option>
+										<option value="V005">V005</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+							<!--<td align=right nowrap="nowrap">
+									<input id="ecoClick" type="checkbox" title="Save Energy" />
+									<div id="eco" >Eco Ver</div>
+								</td>-->
+								<td align=right nowrap="nowrap" colspan=2>
+									<input id="loadSelClick" type="checkbox" title="Click to Enable" />
+									<div id="loadSelTrig" >Load Formula </div>
+								</td>
+							</tr>
+							</table>
+
+							<table width="100%" border="0" cellpadding="0" cellspacing="0" id="btnsTable" class="btnsTable">
+							<tr>
+								<td class="padTD">
+									<div class="button_container_"><span class="button"><span>
+										<input type="button" id="resetPG" value="Reset"/>
+									</span></span></div>
+								</td>
+								<td class="padTD2 save">
+									<div class="button_container_"><span class="button"><span>
+										<input type="button" id="savePop" value="Save"/>
+									</span></span></div>
+								</td>
+								<td class="padTD2 edit">
+									<div class="button_container_"><span class="button"><span>
+										<input type="button" id="updateFormula" value="Update"/>
+									</span></span></div>
+								</td>
+								<td class="padTD2">
+									<div class="button_container_"><span class="button"><span>
+										<input type="button" id="searchFormula" value="Find"/>
+									</span></span></div>
+								</td>
+								<td class="padTD3">
+									<div class="button_container_"><span class="button"><span>
+										<input type="button" id="deleteBtn" value="Delete"/>
+									</span></span></div>
+								</td>
+							</tr>
+							</table>
+							</div>
+						</div>
+					</div>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</div>
+	</div>
+
+	</div> <!-- Contain -->
+
+	<input type="hidden" id="currentFormulaFID" value=""/>
+	<input type="hidden" id="currentFormulaName" value=""/>
+	<input type="hidden" id="prevReportType" value=""/>
+	<input type="hidden" id="formulaBeingEdited" value=""/>
+	<input type="hidden" id="expDivID" value=""/>
+
+	<script type="text/javascript" 	src="js/specials-main-min.js" > </script>
+</body>
+</html>
